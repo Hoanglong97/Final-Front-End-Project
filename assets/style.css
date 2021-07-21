@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f2f5;
+}
+h1{
+    width: 30%;
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0px;
+    text-shadow: 2px 2px #ccc;
+    margin: 0 auto;
+}
+.form{
+    width: 30%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: .5em;
+    box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+label{
+    margin-top: 10px;
+    text-indent: -15px;
+}
+input{
+    width: 100%;
+    margin: 5px 0px;
+    padding: .5rem;
+    background-color:rgb(193, 210, 224);
+    border: none;
+    border-radius: 8px;
+}
+input:focus{
+    background-color: bisque;
+}
+#submit{
+    background-color: rgb(69, 121, 69) ;
+    color: #fff;
+}
+#submit:focus{
+    background-color: rgb(48, 182, 48);
+    cursor: pointer;
+    transition: 0.5s;
+}
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:rgb(69, 121, 69) ;
+}
+a:hover{
+    color: rgb(48, 182, 48);
+    cursor: pointer;
+    transition: 0.5s;
+}
+@media screen and (max-width: 1000px){
+body{
+    background-color: rgb(164, 185, 106);
+}
+h1{
+    text-align: right;
+    color: red;
+}
+.form_input{
+    text-align: right;
+}
+::placeholder{
+    color: red;
+}
+}
