@@ -19,7 +19,6 @@ html{
 .hide, .show{
     display: inline;
 }
-
 .header-1,
 .header-2,
 .header-3{
@@ -127,7 +126,9 @@ h1{
 }
 .slider,
 .category,
-.product{
+.product,
+.icon-container,
+.contact{
     margin: 0 auto;
 }
 .slider{
@@ -185,7 +186,7 @@ h1{
     padding-top: .5rem 0;
 }
 .box-container .btn{
-    width: 100%;
+    width: 90%;
     background-color: red;
     color: white;
     margin-bottom: 1.3rem;
@@ -193,6 +194,7 @@ h1{
 .box-grid{
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
+    grid-row-gap: 7rem;
 }
 .box-grid .box{
     position: relative;
@@ -227,7 +229,8 @@ h1{
 .box-grid .box .quantity input{
     font-size: 1.5rem;  
     text-align: center;
-    background: #666;
+    color: white;
+    background: rgb(241, 104, 104);
     border-radius: .5rem;
 }
 .box-grid .box .price{
@@ -243,8 +246,86 @@ h1{
 
 }
 .box-grid .box .btn{
+    width: 80%;
     display: block;
-    margin: 1rem 0;
+    margin: 1rem auto;
+}
+.icon-container{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-content: space-between;
+}
+.icon-container .icon{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex: 1 1 10rem;
+}
+.icon-container .icon .content{
+    padding-left: 2rem;
+}
+.icon-container .icon .content h3{
+    font-size: 1.5rem;
+    color: rgb(223, 47, 47);
+}
+.icon-container .icon .content p{
+    font-size: 1rem;
+    color: #666;
+}
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+}
+.contact .row .map{
+    width: 100%;
+    flex: 1 1 40rem;
+}
+.contact .row form{
+    display: block;
+    padding: 2rem;
+    flex: 1 1 40rem;
+}
+.contact .row form .inputBox{
+    position: relative;
+}
+.contact .row form .inputBox input, 
+.contact .row form .inputBox textarea{
+    width: 100%;
+    border-bottom: .1rem solid rgba(0,0,0,.3);
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    text-transform: none;
+    color: #333;
+}
+.contact .row form .inputBox textarea{
+  resize: none;
+  height:15rem;
+}
+.contact .row form .inputBox input:focus, 
+.contact .row form .inputBox textarea:focus{
+    border-color: rgb(241, 104, 104);
+}
+.contact .row form .inputBox label{
+    position: absolute;
+    top:2.3rem;
+    left: 0;
+    font-size: 1.5rem;
+}
+.contact .row form .inputBox input:focus ~ label, 
+.contact .row form .inputBox textarea:focus ~label,
+.contact .row form .inputBox input:valid ~ label, 
+.contact .row form .inputBox textarea:valid ~label{
+    top: -.2rem;
+    font-size: 1.3rem;
+    color: #666;
+    transition: .5s;
+}
+.contact form .btn{
+    background-color: red;
+    color: white;
+    float: right;
 }
 @media (max-width: 1271px){
     .header-2{
