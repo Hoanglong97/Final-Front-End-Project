@@ -1,0 +1,107 @@
+.slider{
+    justify-content: space-between;
+}
+.slider-left{
+    width: 40%;
+}
+
+.container-compononent{
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5rem;
+}
+.container-compononent .compononent{
+    padding: 10px;
+}
+.container-compononent .compononent img{
+    width: 100%;
+}
+.content{
+    width: 50%;
+    padding: 0 5rem;
+}
+.content .price{
+    margin-bottom: 2rem;
+}
+.content .price h3{
+    color: red;
+}
+.content .price h3 span{
+    font-size: 1.5rem;
+    color: #666;
+    text-decoration: line-through;
+}
+.content .price p span{
+    color: red;
+    font-weight: bold;
+}
+.content .price .status{
+    color: #666;
+}
+.content .promotion{
+    border: .1rem solid rgba(0 ,0, 0, .1);
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.content .promotion h3{
+    font-size: 1.5rem;
+    color:red;
+}
+.content .promotion li{
+    list-style-type: none;
+    display: block;
+    padding-left: 2rem;
+    line-height: 2.5rem;
+}
+.content .promotion li i{
+    padding-right: .5rem;
+}
+.content .promotion li span{
+    color: #666;
+    font-size: .85rem;
+}
+.promotion li a{
+    text-decoration: none;
+}
+.content .quantity{
+    padding-bottom: .5rem;
+}
+.content .quantity span{
+    font-size: 1.5rem;
+}
+.content .quantity input{
+    padding: .5rem;
+    font-size: 1.5rem;  
+    text-align: center;
+    background: rgb(230, 228, 228);
+    border-radius: .5rem;
+}
+.content .quantity .submit:hover{
+    background-color: red;
+    color: white;
+    transition: .5s;
+}
+.detail h2{
+    margin-top: 7rem; 
+}
+.detail table{
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.detail tr{
+    line-height: 2.5rem;
+    border-top: .1rem dotted rgba(0 ,0, 0, .1);
+    border-bottom: .1rem dotted rgba(0 ,0, 0, .1);
+}
+.detail th{
+    padding: .5rem;
+}
+.description img{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.description h3{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0.5rem 1rem rgba(0 ,0, 0, .5);
+}

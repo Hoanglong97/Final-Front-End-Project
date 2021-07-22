@@ -10,3 +10,12 @@ const showMenu = () =>{
         nav.classList.add('hide')
     }
 }
+// window.onscroll = () => {
+//     const scrollTop = $(".scroll-top")
+//     if(window.scrollY > 250){
+//         scrollTop.classList.remove('hide')
+//     }
+//     else{
+//         scrollTop.classList.add('hide')
+//     }
+// }
