@@ -1,5 +1,69 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.login{
+    display: flex;
+    margin: 2vh auto;
+}
+.login .avatar{
+    margin: 0 auto;
+}
+.login .avatar img{
+    width: 100%;
+    border-radius: 50%;
+}
+.login form{
+    display: block;
+    padding: 2rem;
+    flex: 1 1 40rem;
+    border: .1px solid #666;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 1.5rem #333;
+}
+.login form h1{
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.login  form .element{
+    position: relative;
+}
+.login  form .element input{
+    width: 100%;
+    border-bottom: .1rem solid rgba(0,0,0,.3);
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    text-transform: none;
+    color: #999;
+}
+
+.login form .element input:focus{
+    border-color: rgb(241, 104, 104);
+}
+.login  form .element label{
+    position: absolute;
+    top:2.3rem;
+    left: 0;
+    font-size: 1.2rem;
+}
+.login form .element input:focus ~ label, 
+.login  form .element input:valid ~ label{
+    top: -.2rem;
+    font-size: 1rem;
+    color:red;
+    transition: .5s;
+}
+.login form .btn{
+    margin: 1rem auto;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background-color: red;
+    color: white;
+    float: right;
+}
+.login form a{
+    margin-right: 2rem ;
+    text-decoration: none;
+    color: #333;
+}   
+.login form a:hover{
+    color: red;
 }
