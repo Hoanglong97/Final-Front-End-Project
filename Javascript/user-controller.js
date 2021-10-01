@@ -1,50 +1,58 @@
-// const callAPI = () => {
-//     $.ajax({
-//         url: "https://60f18a5b38ecdf0017b0fcdc.mockapi.io/Product",
-//         method: "GET", // GET or POST or PUT or DELETE
-//         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-//         success: data => {
-//             const { result } = data;
-
-//             // Hide page
-//             $(".card-row").fadeOut(1000);
-
-//             // show new item
-//             for (let item of result) {
-//                 $(".main-page").append(`<a href="#">${item[2]}</a><br/>`);
-//             }
-//         },
-//         error: (xhr, textStatus, errorThrown) => {
-//             console.log(textStatus);
-//         }
-//     });
-// };
-const login = () => {
-    console.log("dcm Hieu")
+const popup = () => {
+    let modalBtn = document.getElementById("popup-btn");
+    let signIn = document.querySelector(".signIn");
+    let modal = document.querySelector(".popup");
+    let closeBtn = document.querySelector(".close-btn");
+    // let name = document.getElementById("name")
+    // let pass = document.getElementById("pass")
+    modalBtn.onclick = function () {
+        modal.style.display = "block"
+        signIn.style.display = "none"
+        // name.removeAttribute('required')
+        // pass.removeAttribute('required')
+    }
+    closeBtn.onclick = function () {
+        modal.style.display = "none"
+        signIn.style.display = "block"
+    }
+}
+const loginIndex = () => {
+    let name = document.getElementById("name").value
+    let pass = document.getElementById("pass").value
     $.ajax({
-        url: "http://localhost:9200/user/_search",
-        dataType: "JSON",
-        method: "get",
+        url: "http://127.0.0.1:8000/v1/users/login",
+        data: '{"username": "' + name + '", "password" : "' + pass + '"}',
+        method: "POST",
         success: data => {
-            console.log(data)
-            // let bool = 0
-            // const name = document.getElementById("name").value
-            // const pass = document.getElementById("pass").value
-            // for (let i of data) {
-            //     if (i.name == name && i.password == pass) {
-            //         bool = 1
-            //         break;
-            //     }
-            // }
-            // if (bool == 1) {
-            //     location.replace("./index.html")
-            // }
-            // else {
-            //     window.alert("Vui lòng nhập lại !")
-            // }
+            if (data) {
+                const loader = document.getElementsByClassName("load")[0]
+                setTimeout(() => {
+                    location.replace('./index.html')
+                }, 2000)
+                loader.style.display = "block"
+            }
+            else {
+                window.alert("Vui lòng nhập lại !")
+            }
         },
         error: (xhr, textStatus, errorThrown) => {
             console.log(textStatus);
+        }
+    })
+}
+const SignUp = () => {
+    let name = document.getElementById("username").value
+    let pass = document.getElementById("password").value
+    $.ajax({
+        url: "http://127.0.0.1:8000/v1/users/",
+        data: '{"username": "' + name + '", "password" : "' + pass + '"}',
+        method: "POST",
+        success: data => {
+            window.alert("Đăng ký thành công")
+            location.replace("./login.html")
+        },
+        error: (xhr, textStatus, errorThrown) => {
+            window.alert("Đăng ký thẩt bại")
         }
     })
 }
