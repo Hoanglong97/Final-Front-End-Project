@@ -21,24 +21,26 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="assets/product.css">
     <title>Computer</title>
 </head>
 
-<body onload="listProduct()">
+<body onload="listProduct(product)">
     <!-- Start Header -->
     <header>
-
         <div class="header-1">
             <div class="share">
-                <span>follow us: </span>
+                <span>Follow us: </span>
                 <a href="#" class="fab fa-facebook-f"></a>
                 <a href="#" class="fab fa-twitter"></a>
                 <a href="#" class="fab fa-instagram"></a>
                 <a href="#" class="fab fa-linkedin"></a>
             </div>
             <div class="call">
-                <span>call us: </span>
+                <span>Call us: </span>
                 <a href="#">+8498538539</a>
             </div>
 
@@ -65,14 +67,17 @@
                     <a href="#" class="fas fa-shopping-cart" onclick="openCart()"></a>
                     <span id="cartQT">0</span>
                 </div>
-                
-                <a href="login.html" class="fas fa-user-circle" onclick="openLoginForm()">
+
+                <a href="#" class="fas fa-user-circle" onclick="returnLogin()">
                 </a>
             </div>
         </div>
     </header>
     <!-- End Header -->
-    <h1> It’s more than a laptop – it’s a way of life</h1>
+    <div class="load">
+        <img src="./img/loader.gif">
+    </div>
+    <h1 class="slogan"> It’s more than a laptop – it’s a way of life</h1>
     <!-- Start Slider -->
     <section class="slider col-9" id="slider">
         <div class="slider-left">
@@ -150,7 +155,7 @@
     <!-- Start Product -->
     <h1 class="heading">New Product</h1>
     <section class="product col-9" id="product">
-        <div class="box-container box-grid" id="list-product">
+        <div class="box-container" id="list-product">
         </div>
     </section>
     <!--Warranty-->
@@ -203,11 +208,11 @@
                 </div>
                 <div class="inputBox">
                     <input type="number" required>
-                    <label for="">Number</label>
+                    <label for="">Phone number</label>
                 </div>
                 <div class="inputBox">
                     <textarea required name="" id="" cols="20" rows="10"></textarea>
-                    <label for="">message</label>
+                    <label for="">Message</label>
                 </div>
                 <input type="submit" value="send message" class="btn">
             </form>

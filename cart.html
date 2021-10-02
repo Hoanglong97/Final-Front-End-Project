@@ -25,28 +25,27 @@
     <link rel="stylesheet" href="assets/cart.css">
     <title>Cart</title>
 </head>
-
 <body onload="loadCart()">
     <!-- Start Header -->
     <header>
 
         <div class="header-1">
             <div class="share">
-                <span>follow us: </span>
+                <span>Follow us: </span>
                 <a href="#" class="fab fa-facebook-f"></a>
                 <a href="#" class="fab fa-twitter"></a>
                 <a href="#" class="fab fa-instagram"></a>
                 <a href="#" class="fab fa-linkedin"></a>
             </div>
             <div class="call">
-                <span>call us: </span>
+                <span>Call us: </span>
                 <a href="#">+8498538539</a>
             </div>
 
         </div>
 
         <div class="header-2">
-            <a href="./index.html" class="logo"><i class="fas fa-laptop"></i>Computer</a>
+            <a href="#" class="logo" onclick="returnIndex()"><i class="fas fa-laptop"></i>Computer</a>
             <form action="" class="search-bar-container">
                 <input type="search" id="search-bar" placeholder="Search something ...">
                 <label for="search-bar" class="fas fa-search"></label>
@@ -56,29 +55,35 @@
         <div class="header-3">
             <div id="menu-bar" class="fas fa-bars" onclick="showMenu()"></div>
             <nav class="navbar hide">
-                <a href="#slider">Home</a>
-                <a href="#category">Category</a>
-                <a href="#product">Product</a>
-                <a href="#contact">Contact</a>
+                <a href="#" onclick="returnIndex()">Home</a>
+                <a href="./index.html">Category</a>
+                <a href="./index.html">Product</a>
+                <a href="./index.html">Contact</a>
             </nav>
             <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="login.html" class="fas fa-user-circle" onclick="openLoginForm()">
+                <div class="cart">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <span id="cartQT">0</span>
+                </div>
+                <a href="#" class="fas fa-user-circle" onclick="returnLogin()">
                 </a>
             </div>
         </div>
     </header>
     <!-- End Header -->
-    <section class="cart col-9  ">
-        <h1>Shopping cart</h1>
-        <div class="container">
+    <div class="load">
+        <img src="./img/loader.gif">
+    </div>
+    <section class="cartProduct col-9  ">
+        <h1 class="slogan">Shopping cart</h1>
+        <div class="container col-12">
             <table>
                 <thead>
                     <tr>
                         <th colspan="2">Item</th>
                         <th>Price</th>
-                        <th>Discount</th>
                         <th>Quantity</th>
+                        <th>Amount</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -169,6 +174,7 @@
         </div>
     </section>
     <script src="./Javascript/cart.js"></script>
+    <script src="./Javascript/product.js"></script>
 </body>
 
 </html>

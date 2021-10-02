@@ -27,8 +27,11 @@
     <title>Welcome</title>
 </head>
 
-<body>
-    <div class="login col-3">
+<body onload="popup()">
+    <div class="load">
+        <img src="./img/loader.gif">
+    </div>
+    <div class="login col-3 signIn">
         <form action="">
             <h1>Welcome to my page!</h1>
             <div class="avatar col-4"><img src="./img/avatar/1.jpg" alt=""></div>
@@ -40,9 +43,25 @@
                 <input id="pass" type="password" required>
                 <label for="">Password</label>
             </div>
-            <input type="submit" value="Sign In" class="btn" onclick="login()">
+            <input type="button" value="Sign In" class="btn" onclick="loginIndex()">
             <a href="">Forgot password ?</a>
-            <a style="float: right;" href="">Sign up now</a>
+            <button id="popup-btn"> Sign up now </button>
+        </form>
+    </div>
+    <div class="login col-3 popup">
+        <form action="">
+            <span class="close-btn">&times;</span>
+            <h1>Sign Up</h1>
+            <div class="avatar col-4"><img src="./img/avatar/1.jpg" alt=""></div>
+            <div class="element">
+                <input id="username" type="text" required>
+                <label for="">User Name</label>
+            </div>
+            <div class="element">
+                <input id="password" type="password" required>
+                <label for="">Password</label>
+            </div>
+            <input type="button" value="Sign Up" class="btn" onclick="SignUp()">
         </form>
     </div>
     <script src="./Javascript/user-controller.js"></script>
