@@ -112,8 +112,10 @@ const product = [
 const listProduct = (items) => {
         let storage = JSON.parse(localStorage.getItem("products"))
         var total = 0
-        for (let i of storage){
+        if (storage){
+            for (let i of storage){
             total += i.quantity
+        }
         }
         document.getElementById("cartQT").innerHTML = total
     const listProduct = document.getElementById("list-product")
