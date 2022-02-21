@@ -1,6 +1,6 @@
 .login{
     display: flex;
-    margin: 2vh auto;
+    margin: 10vh auto;
 }
 .login .avatar{
     margin: 0 auto;
@@ -57,7 +57,10 @@
     font-size: 1.5rem;
     background-color: red;
     color: white;
+}
+#popup-btn{
     float: right;
+    background-color: white;
 }
 .login form a{
     margin-right: 2rem ;
@@ -66,4 +69,16 @@
 }   
 .login form a:hover{
     color: red;
+}
+.popup {
+    display: none;
+}
+.close-btn {
+    float: right;
+    color: #2E2E2E;
+    font-size: 25px;
+    font-weight: 700;
+}
+.close-btn:hover {
+    color: #D2D2D2;
 }

@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;500;600;700&display=swap');
 *{
+    font-family: 'STIX Two Text', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
     outline: none;
     border: none;
 }
@@ -19,6 +20,33 @@ html{
 .hide, .show{
     display: inline;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+}
+.slogan{
+    padding-top: calc(84px + 7vh);
+}
+.load{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000000000;
+	display: none;
+	overflow: hidden;
+}
+.load img{
+	width: 150px;
+	height: 150px;
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -75px;
+}
 .header-1,
 .header-2,
 .header-3{
@@ -27,6 +55,7 @@ html{
     justify-content: space-between;
     padding: 1rem 9%;
     background-color:rgb(223, 47, 47);
+    width: 100%;
 }
 .header-1{
     border-bottom: .1rem solid rgba(255,255,255,.2);
@@ -34,7 +63,6 @@ html{
 .header-3{
     background: #fff;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    position: relative;
     z-index: 1000;
 }
 .header-1 span{
@@ -46,7 +74,6 @@ html{
     padding: 0 .7rem;
     color: #fff;
     text-decoration: none;
-
 }
 .header-1 a:hover{
     color: black;
@@ -66,7 +93,7 @@ html{
 .header-2 .search-bar-container{
     display: flex;
     align-items: center;
-    width: 50rem;
+    width: 30vw;
     padding: .75rem;
     background: rgba(255,255,255,.2);
     border-radius: .5rem;
@@ -105,6 +132,7 @@ html{
     color: #666;
     font-size: 2rem;
     margin-right: 1.5rem;
+    text-decoration: none;
 }
 .header-3 .icons .cart{
     position: relative;
@@ -117,8 +145,8 @@ html{
     right: 1.0rem;
     z-index: 1;
     background: red;
-    border-radius: .5rem;
-    padding: 2px .25rem;
+    border-radius: 50%;
+    padding: 2px .5rem;
     color: white;
 }
 .header-3 .icons .user-login{
@@ -176,7 +204,9 @@ h1{
 }
 /* Category */
 .box-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-row-gap: 7rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -211,61 +241,58 @@ h1{
     color: white;
     margin-bottom: 1.3rem;
 }
-.box-grid{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-row-gap: 7rem;
-}
-.box-grid .box{
+
+.box-container .box{
     position: relative;
 }
-.box-grid .discount{
+.box-container .discount{
     position: absolute;
     top: -1rem;
     right: -1.5rem;
-    background: rgb(223, 47, 47);
+    background: red;
     padding: .5rem 1rem;
     border-radius: .5rem;
     color: white;
     font-weight: bold;
 }
-.box-grid .box img{
+.box-container .box img{
     width: 100%; 
     border: .1rem solid rgba(0, 0, 0, 0.3);
 }
-.box-grid .box h3{
+
+.box-container .box h3{
     color: #333;
     text-align: center;
     font-size: 2rem;
     padding: 1rem 0;
 }
-.box-grid .box .quantity{
+.box-container .box .quantity{
     text-align: center;
     padding-bottom: .5rem;
 }
-.box-grid .box .quantity span{
+.box-container .box .quantity span{
     font-size: 1.5rem;
 }
-.box-grid .box .quantity input{
+.box-container .box .quantity input{
     font-size: 1.5rem;  
     text-align: center;
     color: white;
-    background: rgb(241, 104, 104);
+    background: red;
     border-radius: .5rem;
 }
-.box-grid .box .price{
+.box-container .box .price{
     font-weight: bolder;
     color: red;
     font-size: 2rem;
     text-align: center;
 }
-.box-grid .box .price span{
+.box-container .box .price span{
     text-decoration: line-through;
     color: #666;
     font-size: 1.5rem;
 
 }
-.box-grid .box .btn{
+.box-container .box .btn{
     width: 80%;
     display: block;
     margin: 1rem auto;
@@ -286,7 +313,7 @@ h1{
 }
 .icon-container .icon .content h3{
     font-size: 1.5rem;
-    color: rgb(223, 47, 47);
+    color: red;
 }
 .icon-container .icon .content p{
     font-size: 1rem;
@@ -325,7 +352,7 @@ h1{
 }
 .contact .row form .inputBox input:focus, 
 .contact .row form .inputBox textarea:focus{
-    border-color: rgb(241, 104, 104);
+    border-color: red;
 }
 .contact .row form .inputBox label{
     position: absolute;
@@ -348,6 +375,7 @@ h1{
     float: right;
 }
 .footer{
+    background-color:rgb(223, 47, 47);
     border-top: .1rem solid #333;
     margin-top: 7rem;
     padding: 1rem 15%;
@@ -360,19 +388,20 @@ h1{
 .footer h3{
     font-size: 1.7rem;
     font-weight: bold;
+    color: #fff !important
 }
 .footer p{
-    color: #333;
+    color: #fff;
 }
 .footer a{
     display: block;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     font-weight: bold;
     text-decoration: none;
-    color: #666;
+    color: #fff;
 }
 .footer a:hover{
-    color:rgb(223, 47, 47);
+    color:#000;
 }
 /* .scroll-top{
     position: fixed;
@@ -387,11 +416,12 @@ h1{
     display: none;
 } */
 @media (max-width: 1271px){
-    .header-2{
-        flex-flow: column;
+    .box-container{
+    grid-template-columns:45% 45%;
+    grid-row-gap: 7rem;
     }
-    .header-2 .search-bar-container{
-        margin-top: 1rem;
+    .contact .map{
+        height: 500px;
     }
 }
 @media (max-width: 1025px){
@@ -422,13 +452,25 @@ h1{
         background: #fff;
         text-align: center;
     }
-    .header-2{
-        flex-flow: column;
+    .footer .box-container{
+        display: block;
+        text-align: center;
+
     }
-    .header-2 .search-bar-container{
-        width: 100%;
+    .footer .box-container .box{
         margin-top: 2rem;
     }
+    .slider{
+        display: block;
+    }
+    .slider-left, .slider-right{
+        width: 100%;
+        margin: 0;
+    }
+    .slider-right{
+        margin-top: 1rem;
+    }
+    
 }
 @media (max-width: 514px){
     .header-1{

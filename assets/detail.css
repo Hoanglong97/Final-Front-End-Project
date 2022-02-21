@@ -5,15 +5,15 @@
     width: 40%;
 }
 
-.container-compononent{
+.container-componont{
     display: flex;
     justify-content: space-between;
     margin-top: .5rem;
 }
-.container-compononent .compononent{
+.container-componont .componont{
     padding: 10px;
 }
-.container-compononent .compononent img{
+.container-componont .componont img{
     width: 100%;
 }
 .content{

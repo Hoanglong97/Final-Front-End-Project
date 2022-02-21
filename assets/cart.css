@@ -1,8 +1,16 @@
-*{
+*{  
     margin: 0;
 }
-.cart{
+.cartProduct{
     margin: 0 auto;
+}
+.cartProduct h3{
+    text-align: center;
+    font-weight: 450;
+}
+.cartProduct a{
+    text-decoration: none;
+    color: red;
 }
 .container table{
     width: 100%;
@@ -35,7 +43,4 @@
     color: red;
     background-color: white;
     border:  .1rem solid red;
-}
-#total{
-    border-top: 1px solid #999;
 }

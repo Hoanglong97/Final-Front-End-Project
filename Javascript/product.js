@@ -1,15 +1,15 @@
-window.onscroll = (function() {myFunction()});
+window.onscroll = (function () { myFunction() });
 var navbar = document.getElementsByClassName("header-3")[0];
 var sticky = navbar.offsetTop;
 var slogan = document.getElementsByClassName("slogan")[0]
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-    slogan.classList.add("slogan")
-  } else {
-    navbar.classList.remove("sticky");
-    slogan.classList.remove("slogan")
-  }
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        slogan.classList.add("slogan")
+    } else {
+        navbar.classList.remove("sticky");
+        slogan.classList.remove("slogan")
+    }
 }
 const showMenu = () => {
     const menu = document.getElementById('menu-bar')
@@ -25,30 +25,30 @@ const showMenu = () => {
 }
 const returnIndex = () => {
     const loader = document.getElementsByClassName("load")[0]
-    setTimeout(()=>{
+    setTimeout(() => {
         location.replace('./index.html')
-    },500)
+    }, 500)
     loader.style.display = "block"
 }
 const returnDetail = () => {
     const loader = document.getElementsByClassName("load")[0]
-    setTimeout(()=>{
+    setTimeout(() => {
         location.replace('./detail.html')
-    },500)
+    }, 500)
     loader.style.display = "block"
 }
 const openCart = () => {
     const loader = document.getElementsByClassName("load")[0]
-    setTimeout(()=>{
+    setTimeout(() => {
         location.replace('./cart.html')
-    },500)
+    }, 500)
     loader.style.display = "block"
 }
 const returnLogin = () => {
     const loader = document.getElementsByClassName("load")[0]
-    setTimeout(()=>{
+    setTimeout(() => {
         location.replace('./login.html')
-    },500)
+    }, 500)
     loader.style.display = "block"
 }
 const product = [
@@ -110,14 +110,14 @@ const product = [
     }
 ]
 const listProduct = (items) => {
-        let storage = JSON.parse(localStorage.getItem("products"))
-        var total = 0
-        if (storage){
-            for (let i of storage){
+    let storage = JSON.parse(localStorage.getItem("products"))
+    var total = 0
+    if (storage) {
+        for (let i of storage) {
             total += i.quantity
         }
-        }
-        document.getElementById("cartQT").innerHTML = total
+    }
+    document.getElementById("cartQT").innerHTML = total
     const listProduct = document.getElementById("list-product")
     for (let i of items) {
         const newItem = document.createElement("div")
